@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +51,7 @@
 
         .slide-content {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             text-align: center;
         }
 
@@ -86,7 +87,7 @@
         #slide1 .agenda-item:nth-child(3) { animation-delay: 1.6s; }
 
 
-        /* Slide 2 Styles - FIXED */
+        /* Slide 2 Styles */
         #slide2 h2 {
             font-size: 2.5rem;
             color: #1a237e;
@@ -106,7 +107,7 @@
         .expert-card {
             width: 220px;
             height: 220px;
-            border-radius: 50%; /* Makes the card circular */
+            border-radius: 50%;
             padding: 20px;
             background: #f8f9fa;
             border: 1px solid #e0e0e0;
@@ -147,7 +148,7 @@
             margin: 0;
         }
 
-        /* Slide 3 Styles - FIXED */
+        /* Slide 3 Styles - UPDATED */
         #slide3 .slide-content {
             display: flex;
             flex-direction: column;
@@ -157,32 +158,37 @@
         #slide3 h2 {
             font-size: 2.5rem;
             color: #1a237e;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             animation: fadeInDown 1s ease-out;
         }
         .solutions-container {
             display: flex;
-            justify-content: center; /* Center the cards */
-            gap: 30px; /* Add space between cards */
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             width: 100%;
-            max-width: 1100px;
         }
         .solution-card {
-            width: 30%;
+            width: 18%;
+            min-width: 230px;
             background-color: #f8f9fa;
             border-radius: 12px;
-            padding: 25px;
+            padding: 20px;
             text-align: left;
             border: 1px solid #e0e0e0;
             opacity: 0;
             animation: slideInUp 0.8s ease-out forwards;
+            display: flex;
+            flex-direction: column;
         }
         .solution-card:nth-child(1) { animation-delay: 0.5s; }
-        .solution-card:nth-child(2) { animation-delay: 0.8s; }
-        .solution-card:nth-child(3) { animation-delay: 1.1s; }
+        .solution-card:nth-child(2) { animation-delay: 0.7s; }
+        .solution-card:nth-child(3) { animation-delay: 0.9s; }
+        .solution-card:nth-child(4) { animation-delay: 1.1s; }
+        .solution-card:nth-child(5) { animation-delay: 1.3s; }
 
         .solution-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #3949ab;
             margin-top: 0;
             border-bottom: 2px solid #3949ab;
@@ -192,14 +198,16 @@
         .solution-card ul {
             padding-left: 0;
             list-style: none;
+            margin: 0;
+            flex-grow: 1;
         }
         .solution-card li {
             margin-bottom: 10px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #333;
         }
-        .pro::before { content: '✓'; color: #2e7d32; font-weight: bold; margin-right: 10px; }
-        .con::before { content: '✗'; color: #c62828; font-weight: bold; margin-right: 10px; }
+        .pro::before { content: '✅'; margin-right: 10px; }
+        .con::before { content: '❌'; margin-right: 10px; }
 
 
         /* Navigation */
@@ -262,6 +270,7 @@
                         
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -269,33 +278,51 @@
         <div class="slide" id="slide3">
             <div class="slide-content">
                 <h2>Potential Solutions: What Should Stefan Do?</h2>
-                <p>Observer take on experts view and pros and cons explanation- <italic><strong>By Rohit Kumar</strong></italic></p> 
+                <p>Observer's Perspective on Experts' Views and Explanation of Pros and Cons <strong> - By Rohit Kumar</strong></p>
                 <div class="solutions-container">
                     <div class="solution-card">
-                        <h3>1. Direct Confrontation</h3>
+                        <h3>1. Confrontation</h3>
                         <ul>
-                            <li class="pro">Honest & Clear</li>
-                            <li class="pro">Addresses the root problem</li>
-                            <li class="con">High risk Vijay quits</li>
-                            <li class="con">Goes against leadership's past advice</li>
+                            <li class="pro">Addresses problem immediately</li>
+                            <li class="pro">Provides clarity & sets boundaries</li>
+                            <li class="con">Very high risk Vijay quits</li>
+                            <li class="con">Stefan lacks authority & backup</li>
                         </ul>
                     </div>
                     <div class="solution-card">
-                        <h3>2. Strategic Appeal</h3>
+                        <h3>2. Defer & Revisit</h3>
                         <ul>
-                            <li class="pro">Appeals to Vijay's ego</li>
-                            <li class="pro">Frames change as a challenge</li>
-                            <li class="pro">Lower risk of immediate conflict</li>
-                            <li class="con">May be too indirect to work</li>
+                            <li class="pro">Prevents immediate crisis</li>
+                            <li class="pro">Allows strategic planning</li>
+                            <li class="con">Problem continues to deteriorate</li>
+                            <li class="con">Loss of momentum & credibility</li>
                         </ul>
                     </div>
                     <div class="solution-card">
-                        <h3>3. Escalate & Wait</h3>
+                        <h3>3. Training for All</h3>
                         <ul>
-                            <li class="pro">Gets leadership buy-in</li>
-                            <li class="pro">Creates a unified strategy</li>
-                            <li class="con">Lets the problem fester</li>
-                            <li class="con">Shows weakness to Vijay</li>
+                            <li class="pro">Addresses systemic issues</li>
+                            <li class="pro">Non-threatening approach</li>
+                            <li class="con">Too slow for the urgent crisis</li>
+                            <li class="con">May not change Vijay's personality</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>4. Escalation</h3>
+                        <ul>
+                            <li class="pro">Ensures organizational alignment</li>
+                            <li class="pro">Enables coordinated intervention</li>
+                            <li class="con">Not feasible before dinner</li>
+                            <li class="con">Partners may prioritize revenue</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>5. Succession Plan</h3>
+                        <ul>
+                            <li class="pro">Realistic long-term solution</li>
+                            <li class="pro">Strategically protects firm</li>
+                            <li class="con">Requires significant time</li>
+                            <li class="con">High risk if discovered</li>
                         </ul>
                     </div>
                 </div>
